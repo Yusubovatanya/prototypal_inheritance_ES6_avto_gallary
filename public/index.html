@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Форма входа</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="modal fade" id="resultModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+          <p class="modal-title"></p>
+        </div>
+        <div class="modal-body" id="resultBodyModal">
+          <p id="content" style="font-size: 20px;">Дальнейшее добавление невозможно</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login_page">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h4 class="my-0 mr-md-auto font-weight-normal">User Page</h4>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Главная</a>
+        <a class="p-2 text-dark" href="#">Галлерея</a>
+        <a class="p-2 text-dark" href="#">О компании</a>
+        <a class="p-2 text-dark" href="#">Курсы</a>
+      </nav>
+    </div>
+  </div>
+
+  <main role="main">
+    <div id="menu" style="display: none">
+
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">User Page</h5>
+        <div id="go_groupe_btn" class="btn-group my-2 my-md-0 mr-md-3" style="visibility: visible">
+          <button id="go_gallery" class="btn btn-outline-primary">Gallery</button>
+          <button id="go_about_user" class="btn btn-outline-primary">About user</button>
+          <button id="go_exit" class="btn btn-outline-primary">Exit</button>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+
+      <!--alert-->
+      <div class="d-flex justify-content-center">
+        <div id="my_alert" class="alert alert-danger text-center" role="alert" style="visibility: hidden;">
+        </div>
+      </div>
+
+      <form id="formSignIn" class="form-signin">
+
+        <h1 class="h3 mb-4 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus=""
+          style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+          autocomplete="off">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""
+          style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+          autocomplete="off">
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button id="singIn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>
+    <div id="userPage" class="container">
+      <form>
+        <div class="row">
+          <div class="form-group user_form">
+            <label for="getEmail">Email address:</label>
+            <input type="email" class="form-control" id="getEmail">
+          </div>
+          <div class="form-group  user_form">
+            <label for="getPassword">Password:</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="getPassword">
+              <div class="input-group-append">
+                <button id="showPassword" class="btn btn-primary" type="button"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="boxFormEdit" class="container box-shadow" style="display: none">
+      <form>
+        <fieldset>
+          <legend> Edit element:</legend>
+          <div class="form-group row">
+            <label for="inputUrl" class="col-sm-2 col-form-label">Url:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputUrl" placeholder="url">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputName" placeholder="name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputId" class="col-sm-2 col-form-label">id:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputId" placeholder="id">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputDescription" class="col-sm-2 col-form-label">Description:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputDescription" placeholder="description">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Date:</label>
+            <div class="col">
+              <input type="text" class="form-control" id="inputDay" placeholder="day">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="inputMonth" placeholder="month">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="inputYear" placeholder="year">
+            </div>
+          </div>
+        </fieldset>
+        <div id="btnGroupeEdit" style="display: none">
+          <button id="saveForm" class="btn btn-primary" type="button">Save changes</button>
+          <button id="closeForm" class="btn btn-secondary" type="button">Close</button>
+        </div>
+        <div id="btnGroupeCreate" style="display: none">
+          <button id="saveFormCreate" class="btn btn-primary" type="button">Create</button>
+          <button id="closeFormCreate" class="btn btn-secondary" type="button">Close</button>
+        </div>
+      </form>
+    </div>
+    <!--gallery-->
+    <div class="site-wrapper" id="gallery" style="display: none">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-12 col-md-12">
+            <h3>Галерея</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 col-md-12 text-center">
+            <button class="btn btn-primary" type="button" id="add" data-toggle="tooltip" data-placement="left"
+              title="Добавить одно изображение">Добавить новое
+              изображение</button>
+            <p class="count-text">Добавленно изображений: <span id="count">0</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12">
+          <select id="line-selector" class="form-control count-selector" style="width: 250px; margin: 0 auto;">
+            <option value="1">По имени А- Я</option>
+            <option value="2">По имени Я — А</option>
+            <option value="3">Сначала новые</option>
+            <option value="4">Сначала старые</option>
+          </select>
+          <br><br>
+        </div>
+
+        <div class="row" id="result"></div>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              <p class="modal-title"></p>
+            </div>
+            <div class="modal-body">
+              <p id="content" style="font-size: 20px; text-align: center;">Дальнейшее добавление невозможно !!!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Данные успешно сохранены The data has been successfully saved !
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="js/moment.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script src=js/gallery.js> </script> <script src=js/main.js> </script> </body> </html>

@@ -1,0 +1,129 @@
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(193, 195, 197, 0.671);
+}
+
+#boxFormEdit {
+  padding: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: none;
+}
+
+#my_alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 500px
+}
+
+.form-signin,
+.alert.alert-secondary {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 50px auto;
+}
+
+.alert.alert-secondary {
+  margin: 0px auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input {
+  margin: 15px 0;
+}
+
+.card-info {
+  padding: 1.25rem;
+}
+
+nav a {
+  margin: 0 3px;
+}
+
+.card_item {
+  width: 230px;
+}
+
+.img_card {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 175px;
+}
+
+#result {
+  margin-bottom: 30px;
+}
+
+#userPage {
+  width: 1000px;
+  display: none;
+  margin-top: 150px;
+}
+
+.user_form {
+  width: 50%;
+  padding-right: 15px;
+}
+
+.count-text {
+  padding-top: 10px;
+}
